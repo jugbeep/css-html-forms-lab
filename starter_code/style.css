@@ -5,11 +5,21 @@
 	http://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
 }
 
-/* 
-	Use Google Fonts to make all of the text Proza Libre.
+ 
+	/*//Use Google Fonts to make all of the text Proza Libre.*/
 
-	Make the Title twice as large as the body text, bold, and give it some nice margin.
-*/
+body {
+	font-family: 'Proza Libre', sans-serif;
+	background-color: #E3E6EC;
+}
+
+
+	/*Make the Title twice as large as the body text, bold, and give it some nice margin.*/	
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+	margin: 1.25em;
+}
 
 /*-------- Main Styles --------*/
 
@@ -20,7 +30,34 @@
 
 	Every container, form, input, and button should have rounded corners.
 */
+#main {
+	width: 100%;
+	border-radius: 5px;
+}
+form.form {
+	float: left;
+	border-radius: 5px;
+	width: 500px;
+	margin: 1em;
+}
+.container{
+	float: left;
+	margin: 1em;
+}
+input {
+	border-radius: 5px;
+	width: 100%;
+	margin: 1em;
+}
+textarea {
+	border-radius: 5px;
 
+}
+.formGroup {
+	width: 100%;
+	display: inline-block;
+}
+}
 /*-------- Form Styles --------*/
 
 
@@ -50,10 +87,11 @@
 
 	The submit button should float to the right, be bolded, and only be as wide as the text makes it.
 
-	The submit button should be rga(39, 208, 127), but only 50% opacity. On hover, it should be 100% opacity.
-	
-	
+	The submit button should be rga(39, 208, 127), but only 50% opacity. On hover, it should be 100% opacity.	
 */
+form { 
+	
+}
 
 
 /*-------- Results Styles --------*/
