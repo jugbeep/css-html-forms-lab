@@ -111,6 +111,7 @@
 		$("form").on("submit", function(event){
 
 		    // Stop the form from submitting
+		   		//
 		   		event.preventDefault();
 		   		
 
@@ -128,20 +129,19 @@
 	    		let $ADJ1 = $('#check1').val();
 	    		let $ADJ2 = $('#check2').val();
 	    		let $ADJ3 = $('#check3').val();
-
-
-	    		console.log(ADJ1, ADJ2, ADJ3);
+	    		console.log($ADJ1, $ADJ2, $ADJ3);
 	    		let $NOUN2 = $('input#noun-2').val();
-	    		console.log(NOUN2);
+	    		console.log($NOUN2);
 
-	    		})
 	   			
-	   			let story = "Once upon a time ther was a Developer named" + $NAME ;
+	   			let story = "Once upon a time ther was a Developer named " + $NAME + ". " + $NAME +" came to General Assembly to " + $VERB1 + " the great mountain of programming knowledge. " +$MISSION +"! " +$NAME + " shouted. Though " +$SENTIMENT+ "," +$NAME +" was able to overcome all obstacles with the power of their " +$NOUN+ ". In the end, their success can be contributed entirely to their " +$ADJ1 +" "+ $ADJ2 +" "+ $ADJ3 +" " +$NOUN2+".";
 
-	   			$('<div id="myStory"> <p id="myPara"></div>').appendTo('results');
+	   			$('<div id="myStory"> <p id="myPara">TEXT</p></div>').appendTo('.results');
 
-	   			$('myPara').HTML(story);
 
+	   			$('#myPara').html(story);
+	   			console.log(story);
+	   		})
 
 	    	/*	
 				
