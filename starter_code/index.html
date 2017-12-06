@@ -111,15 +111,45 @@
 		$("form").on("submit", function(event){
 
 		    // Stop the form from submitting
+		   		event.preventDefault();
+		   		
 
 	    	// Run the 'makeResults' function seen above
+	    		let $NAME = $('input#name').val();
+	    		console.log($NAME);
+	    		let $VERB1 = $('#verb-1').val();
+	    		console.log($VERB1);
+	    		let $MISSION = $('textarea#mission').val();
+	    		console.log($MISSION);
+	    		let $SENTIMENT = $('input[name=sentiment]:checked').val();
+	    		console.log($SENTIMENT);
+	    		let $NOUN = $('input#noun-1').val();
+	    		console.log($NOUN);
+	    		let $ADJ1 = $('#check1').val();
+	    		let $ADJ2 = $('#check2').val();
+	    		let $ADJ3 = $('#check3').val();
 
-	    	/*
+
+	    		console.log(ADJ1, ADJ2, ADJ3);
+	    		let $NOUN2 = $('input#noun-2').val();
+	    		console.log(NOUN2);
+
+	    		})
+	   			
+	   			let story = "Once upon a time ther was a Developer named" + $NAME ;
+
+	   			$('<div id="myStory"> <p id="myPara"></div>').appendTo('results');
+
+	   			$('myPara').HTML(story);
+
+
+	    	/*	
+				
 			
 				For each value entered into a form input, add the input to the corresponding sentence, then append the text into the results section:
 
 				"Once upon a time there was a Developer named NAME."
-
+					
 				"NAME came to General Asssembly to VERB1 the great mountain of programming knowledge."
 
 				""MISSION", NAME shouted."
@@ -129,7 +159,13 @@
 				"In the end, their success can be contributed entirely to their " + ADJECTIVE2[list each one checked, comma-separated] + NOUN2."
 
 	    	*/ 
-		});
+	    	
+	    	
+
+
+
+	    	makeResults();
+		
 	</script>
 
 </body>
